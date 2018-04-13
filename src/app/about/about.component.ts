@@ -19,9 +19,17 @@ export class AboutComponent implements OnInit {
     {date:new Date(), message:"CC"}     
   ];
 
+  commentBox={date:null,message:""}
+
   constructor() { }
 
   ngOnInit() {
+  }
+ 
+  onAddComment(){
+    this.commentBox.date=new Date();
+    this.comments.push(this.commentBox);
+    this.commentBox={date:null,message:""};
   }
 
 }
