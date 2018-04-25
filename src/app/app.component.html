@@ -1,10 +1,13 @@
 <div class="container">
+  <button routerLink="/about" class="btn btn-primary">About</button>
+  <button routerLink="/contacts" class="btn btn-primary">Contacts</button>
   <div class="panel panel-primary">
     <div class="panel-body">
+      <router-outlet>
+			</router-outlet>
       <ul class="list-group">
 				<li class="list-group-item">Inside the App Component</li>
 			</ul>
-        <app-about></app-about>
     </div>
   </div>
 </div>
