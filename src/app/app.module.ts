@@ -8,6 +8,7 @@ import {Observable} from 'rxjs';
 import { AppComponent } from './app.component';
 import { AboutComponent } from './about/about.component';
 import {AboutService} from "../services/about.service";
+import {SearchService} from "../services/search.service";
 import {FormsModule} from "@angular/forms";
 import { ContactsComponent } from './contacts/contacts.component';
 import { GalleryComponent } from './gallery/gallery.component';
@@ -32,7 +33,7 @@ const routes:Routes=[
     RouterModule.forRoot(routes),
     HttpModule
   ],
-  providers: [AboutService],
+  providers: [AboutService, SearchService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
