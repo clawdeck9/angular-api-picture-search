@@ -10,6 +10,10 @@
         <div class="form-group">
           <label> Keyword : </label>
           <input type="text" name="keyword" ngModel required>
+					<label> Page length : </label>
+          <input type="text" name="pageLength" ngModel required>
+					<label> Page : </label>
+          <input type="text" name="pageNumber" ngModel required>
           <button type="submit" class="btn btn-primary">Search</button>
         </div>
       </form>
@@ -17,10 +21,17 @@
 				<div *ngFor="let p of pages">
 					<div class="panel panel-primary cadre">
 						<div class="panel-body" class="col-md-3">
-							<img src="{{p}}" />
+							<img src="{{p.previewURL}}" />
 						</div>
 					</div>
 				</div>
+			</div>
+			<div class="row">
+				<ul class="nav nav-pills">
+					<li *ngFor="let pill of pillsIndex; let i=index">
+						{{i}}
+					</li>
+				</ul>
 			</div>
 		</div>
 	</div>
